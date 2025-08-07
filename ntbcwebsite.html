@@ -24,12 +24,15 @@ transition-delay: 0s;
 transition: transform 2s ease 0s;
 
 
+
+
     
 }
 
 .IMG4:hover {
     transform: rotate(360deg);
     background-color: 2s ease blue;
+    
 }
 .IMG4:active {
     background-color: blue;
@@ -37,21 +40,41 @@ transition: transform 2s ease 0s;
 
 .IMG2 {
     width: 100%;
-    height: auto; 
+    height: auto;
+    transition: 2s; 
   
     }
+.IMG2:hover {
+    transform: scale(1.5);
+}
+
 .IMG3 {
     
       width: 100%;
     height: auto;
+    transition: 2s;
     
+}
+
+.IMG3:hover {
+    transform: scale(0.5);
 }
 
 .IMG-hymnal {
     width: 100%;
     height: auto;
+    transition: 2s;
+    filter: 100%;
+    transition: 0.5s;
       
 }
+
+.IMG-hymnal:hover {
+    transform: scale(1.5);
+    filter: grayscale(100%);
+    fill: red;
+}
+
 .church-title {
     text-align: center;
     font-size: 43px;
