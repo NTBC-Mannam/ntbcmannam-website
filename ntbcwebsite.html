@@ -16,6 +16,7 @@
 .IMG4 {
    width: 100%;
     height: auto;
+    animation: floatIn 2s ease-in forwards;
 }
 
 .IMG2 {
@@ -129,19 +130,52 @@ font-style: italic;
 }
 
    .hymnal-click {
-    margin: 500px;
+    margin: 150px;
     position: relative;
     bottom: 150px;
     font-size: 28px;
     font-style: italic;
     color: red;
-    
+    text-decoration: none; 
+    cursor: pointer;  
     
    }
-    
+   .hymnal-click:hover {
+  background-color: rgba(0, 0, 255, 0.884);
+    } 
+    .hymnal-click:active {
+        background-color: aqua;
+    }
+.mission {
+   margin: 150px;
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    bottom: 90px;
+    font-style: italic;
+    font-style: bold;
+    color: red;
+    letter-spacing: 30px;
+    animation: floatIn 3s ease-in forwards;
+     width: 100%;
+    height: auto;
+}
+.gospel {
+    margin: 150px;
+    position: relative;
+    font-size: 29px;
+    bottom: 80px;
+    font-family: Algerian, serif;
+    letter-spacing: 4px;
+    color: blueviolet;
+    background-color: rgb(220, 244, 245);
+    animation: floatIn 3s ease-in forwards;
+     width: 100%;
+    height: auto;
+}
+</style>
 
-    </style>
-    <body style="background-color: white">
+<body style="background-color: white">
 
 </head>
 <body>
@@ -155,6 +189,13 @@ font-style: italic;
 
 
        
+</p>
+
+<p class="mission">
+MISSION
+</p>
+<p class="gospel">
+  Preaching the Gospel to bring others to Christ, while teaching and guiding believers to grow in their faith.  
 </p>
 
 <img class="IMG3" src="IMG_20241004_074935~2.jpg"> 
