@@ -3,6 +3,12 @@
 <head>
 <title>ntbcmannam.com</title>
 <style>
+
+#progress {
+  animation-timeline: scroll();
+  animation: grow-progress linear forwards;
+}
+
      .Motto-title {
   text-align: center;
   color: rgba(255, 0, 0, 0.623);
@@ -22,9 +28,8 @@ transition-duration: 5s;
 transition-timing-function: ease;
 transition-delay: 0s;
 transition: transform 2s ease 0s;
-animation: appear linear;
-animation-timeline: view;
-animation-range: entry o;
+
+
 
 
 
@@ -70,14 +75,14 @@ animation-range: entry o;
     height: auto;
     transition: 2s;
     filter: 100%;
-    transition: 3s;
+    animation-fill-mode: forwards;
       
 }
 
 .IMG-hymnal:hover {
     transform: scale(0.5);
     filter: grayscale(100%);
-    fill: red;
+    
 }
 
 .church-title {
