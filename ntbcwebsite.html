@@ -37,6 +37,7 @@ transition: transform 2s ease 0s;
 
 
 
+
 }
 
 .IMG4:hover {
@@ -342,7 +343,7 @@ Database Form
 <img class="contact" src="CONTACT.jpg">
 
 <button class="NTBC-photosvideo" onclick="document.location='https://ntbc-mannam.github.io/ntbc-video/ntbc-video.html'"> 
-    >
+    
 CLICK
 <br>
     NTBC-photos and video 
@@ -350,6 +351,114 @@ CLICK
 
 </body>
 
+</html>
+
+
+
+
+
+
+
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+    @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1000; 
+}
+
+.search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 12px 20px;
+    border: red;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: black;
+    cursor: pointer;
+    margin-top: 5px;
+   
+
+  
+
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.external-links {
+    margin-left: 15px;
+}
+
+.external-links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.external-links a:hover {
+    text-decoration: underline;
+}
+</style>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <link rel="stylesheet" href="styles.css">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('.button');
+    button.addEventListener('click', function() {
+        alert('Thank you for clicking the button!');
+    });
+});
+
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text"  id="search-input"  placeholder="Search..." class="search-input">
+            <button class="search-button">Search</button>
+            <div class="external-links">
+                <a href="https://www.example1.com" target="_blank"></a>
+                <a href="https://www.example2.com" target="_blank"></a>
+                
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1></h1>
+        <p></p>
+    </main>
+</body>
 </html>
 
 
