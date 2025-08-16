@@ -355,71 +355,117 @@ CLICK
 
 
 
-
-
-
-
-
 <style>
-    body {
+
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-
-    @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-    }
-
-
 .search-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
-    position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 1000; 
 }
 
-.search-input {
-    padding: 8px;
+.search-bar {
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
+    border-radius: 5px;
+    width: 200px;
+    transition: width 0.4s ease;
+}
+
+.search-bar:focus {
+    width: 250px;
+    border-color: #007BFF;
+    outline: none;
 }
 
 .search-button {
-    padding: 12px 20px;
-    border: red;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: black;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 5px;
-   
+    margin-left: 5px;
+}
 
-  
-
+.search-button i {
+    font-size: 16px;
 }
 
 .search-button:hover {
     background-color: #0056b3;
 }
 
-.external-links {
-    margin-left: 15px;
+</style>
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <title>Static Search Bar</title>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</body>
+</html>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.external-links a {
-    margin-left: 10px;
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    margin-right: 15px;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-items li {
+    margin-right: 20px;
+}
+
+.menu-items a {
     text-decoration: none;
-    color: #007bff;
+    color: #1f1f1f;
+    font-weight: bold;
 }
 
-.external-links a:hover {
-    text-decoration: underline;
+.menu-items a:hover {
+    color: #007BFF;
 }
 </style>
 
@@ -428,37 +474,22 @@ CLICK
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Bar Example</title>
+    <title>Static Icon Menu</title>
     <link rel="stylesheet" href="styles.css">
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const button = document.querySelector('.button');
-    button.addEventListener('click', function() {
-        alert('Thank you for clicking the button!');
-    });
-});
-
-</script>
-
 </head>
 <body>
-    <header>
-        <div class="search-container">
-            <input type="text"  id="search-input"  placeholder="Search..." class="search-input">
-            <button class="search-button">Search</button>
-            <div class="external-links">
-                <a href="https://www.example1.com" target="_blank"></a>
-                <a href="https://www.example2.com" target="_blank"></a>
-                
-            </div>
+    <div class="menu">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
         </div>
-    </header>
-    <main>
-        <h1></h1>
-        <p></p>
-    </main>
+        <ul class="menu-items">
+            <li><a href="file:///C:/Users/enbaa/OneDrive/Desktop/NTBC-HTML/IMG-20240908-WA0022.jpg">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 </body>
 </html>
-
-
