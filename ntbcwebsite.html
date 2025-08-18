@@ -445,6 +445,51 @@ body {
     background-color: #0056b3;
 }
 
+
+
+
+
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 5px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
 </style>
 
 
@@ -470,54 +515,19 @@ body {
 </html>
 
 
+
+
+
  <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .menu {
-            position: fixed;
-            display: inline-block;
-            top: 10px;
-            left: 10px;
-            z-index: 1000;
-        }
-
-        
-
-        .menu-button {
-            background-color: #fff;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            outline: none;
-        }
-
-        .menu-items {
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-
-        .menu-items a {
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: #1f1f1f;
-        }
-
-        .menu-items a:hover {
-            background-color: #f0f0f0;
-        }
-
-
-         
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}   
     </style>
     </style>
 
@@ -529,61 +539,36 @@ body {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dropdown Menu with Icon</title>
     </head>
-<body>
 
-<div class="menu">
-    <button class="menu-button" onclick="toggleMenu()">
+<body>
+   <div class="menu-icon" onclick="toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
             <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
         </svg>
-    </button>
-
-    <nav>
-<ul>
-
-    <div class="menu-items" id="menuItems">
-      <li><a href="#Home">Home</a></li>
-       <li><a href="#mission">mission</a></li>
-       <li><a href="#hymnal">hymnal</a></li>
-       <li><a href="#contact">Contact</a></li>
     </div>
-</div>
-</ul>
-</nav>
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Mission">Mission</a><li>
+            <li><a href="#Hymnal">Hymnal<a></li>
+            <li><a href="#contact">Contact</a></li>
+             <li><a href="#About Us">About Us</a></li>        
+            </ul>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
 
-<menu id="Home">
-    <h1></h1>
-    <p></p>
-</menu>
-<menu id="mission">
-    <h1></h1>
-    <p></p> 
-</menu>
- <menu id="hymnal">
-    <h1></h1>
-    <p></p>
-</menu>
-<menu id="contact">
-    <h1></h1>
-    <p></p>
-</menu>
 
-<script>
-    function toggleMenu() {
-        const menuItems = document.getElementById('menuItems');
-        menuItems.style.display = menuItems.style.display === 'block' ? 'none' : 'block';
-         
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+<body>
+<footer>
+ <p>&copy; 2025 Mannam-New Testament Baptist Church</p>
 
-    }
-</script>
+</footer>
 
 </body>
 </html>
