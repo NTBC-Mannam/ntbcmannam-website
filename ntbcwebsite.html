@@ -3,6 +3,16 @@
 <head>
 <title>ntbcmannam.com</title>
 
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <title>Static Search Bar</title>
+
+
+
 <style>
 
 html, body {
@@ -248,6 +258,104 @@ letter-spacing: 2px;
     }
 
 
+
+.search-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70px;
+    transition: width 0.4s ease;
+}
+
+.search-bar:focus {
+    width: 200px;
+    border-color: #007BFF;
+    outline: none;
+}
+
+.search-button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;  
+}
+
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 5px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+
+ 
+footer {
+    text-align: center;
+    padding: 3px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}   
+
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -390,160 +498,15 @@ CLICK
 <div class="content"></div>
 
     
- 
-
-
-</body>
-
-</html>
-
-
-
-<style>
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.search-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.search-bar {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 70px;
-    transition: width 0.4s ease;
-}
-
-.search-bar:focus {
-    width: 200px;
-    border-color: #007BFF;
-    outline: none;
-}
-
-.search-button {
-    background-color: #007BFF;
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 5px;
-}
-
-.search-button i {
-    font-size: 16px;
-}
-
-.search-button:hover {
-    background-color: #0056b3;
-}
-
-
-
-
-
-
-.menu-icon {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-}
-
-.menu {
-    display: none;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    position: absolute;
-    top: 60px;
-    left: 20px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.menu.active {
-    display: block;
-}
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.menu li {
-    margin: 5px 0;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #1f1f1f;
-}
-
-.menu a:hover {
-    text-decoration: underline;
-}
-
-</style>
-
-
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
-    <title>Static Search Bar</title>
-</head>
-<body>
-    <div class="search-container">
+ <div class="search-container">
         <input type="text" class="search-bar" placeholder="Search...">
         <button class="search-button">
             <i class="fas fa-search"></i>
         </button>
     </div>
-</body>
-</html>
 
 
-
-
-
- <style>
-footer {
-    text-align: center;
-    padding: 3px 0;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}   
-    </style>
-    </style>
-
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Menu with Icon</title>
-    </head>
-
-<body>
-   <div class="menu-icon" onclick="toggleMenu()">
+    <div class="menu-icon" onclick="toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
             <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
         </svg>
@@ -564,20 +527,14 @@ footer {
         }
     </script>
 
-    
-
-</body>
-
-
-<body>
-<footer>
+    <footer>
  <p>&copy; 2025 Mannam-New Testament Baptist Church</p>
 
 </footer>
 
 
-
 </body>
+
 </html>
 
 
