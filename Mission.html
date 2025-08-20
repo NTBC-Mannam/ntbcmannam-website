@@ -268,6 +268,10 @@ letter-spacing: 2px;
     align-items: center;
 }
 
+
+
+
+
 .search-bar {
     padding: 10px;
     border: 1px solid #ccc;
@@ -299,6 +303,8 @@ letter-spacing: 2px;
 .search-button:hover {
     background-color: #0056b3;  
 }
+
+
 
 .clear-icon {
     position: absolute;
@@ -478,17 +484,21 @@ body {
 <img class="IMG3" src="IMG_20241004_074935~2.jpg"> 
 
 
- <div class="search-container">
-    <form method="GET" action="https://www.google.com/search"  name="searchform" target="_blank"></form>
-    <input name="sitesearch" type="hidden" value="example.com">
-        <input type="text" input autocomplete="on" id="search-input" name="q" class="search-bar" placeholder="Search...">
-          <span class="clear-icon" id="clear-icon">&times;</span>
-          
-        <button class="search-button">
-            <i class="fas fa-search"></i>
-        </button>
+<div class="search-container">
+    <form  action="https://www.google.com/search" method="get"  >
+    
+        <input type="text"  id="search-input" name="q" class="search-bar" placeholder="Search...">
+ <button class="search-button" type="submit" >
+<i class="fas fa-search"></i>
+    </button>
+</form>
+        <span class="clear-icon" id="clear-icon">&times;</span>
+
+    
     </div>
 
+   
+         
 <script>
        const searchInput = document.getElementById('search-input');
         const clearIcon = document.getElementById('clear-icon');
@@ -497,7 +507,12 @@ body {
             searchInput.value = '';
             searchInput.focus();
         });
+
+        
+
     </script>
+
+
 
 
    </main>
