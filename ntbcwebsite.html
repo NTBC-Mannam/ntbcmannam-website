@@ -299,8 +299,32 @@ letter-spacing: 2px;
     background-color: #0056b3;  
 }
 
+.clear-icon {
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+}
 
-.menu-icon {
+.clear-icon:hover {
+    color: #f00;
+}
+
+#search-input:focus + .clear-icon,
+#search-input:not(:placeholder-shown) + .clear-icon {
+    display: block; 
+}
+
+
+
+
+
+
+
+    menu-icon {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -549,14 +573,24 @@ CLICK
  <div class="search-container">
     <form method="GET" action="https://www.google.com/search"  name="searchform" target="_blank"></form>
     <input name="sitesearch" type="hidden" value="example.com">
-        <input type="text" input autocomplete="on"  name="q" class="search-bar" placeholder="Search...">
-         
+        <input type="text" input autocomplete="on" id="search-input" name="q" class="search-bar" placeholder="Search...">
+          <span class="clear-icon" id="clear-icon">&times;</span>
+          <div class="icon-container"></div>
+          <div class="tooltip"></div>
         <button class="search-button">
             <i class="fas fa-search"></i>
         </button>
     </div>
 
+<script>
+       const searchInput = document.getElementById('search-input');
+        const clearIcon = document.getElementById('clear-icon');
 
+        clearIcon.addEventListener('click', function() {
+            searchInput.value = '';
+            searchInput.focus();
+        });
+    </script>
 
 
    </main>
